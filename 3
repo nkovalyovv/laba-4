@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+void prNum() {
+    int num;
+    cout << "Введите число: ";
+    cin >> num;
+    if (cin.fail()) {
+        cout << "Введите коректное значение!";
+    }
+    
+    if (num == 0) {
+        return;
+    }
+
+    if (num % 2 != 0) {
+        cout << "Нечётное число: " << num << " ;";
+    }
+
+    prNum();
+}
+
+int main() {
+    setlocale(LC_ALL, "rus");
+    prNum();
+    
+    return 0;
+}
